@@ -1,8 +1,8 @@
-// //   1. Lesson;
+// !   1. Lesson;
 
-// // COMMAND + OPTION + J.
+// COMMAND + OPTION + J.
 
-// // Рисуем столько котиков, сколько захотим!
+// Рисуем столько котиков, сколько захотим!
 // var drawCats = function (howManyTimes) {
 //   for (var i = 0; i < howManyTimes; i++) {
 //     console.log(i + " =^.^= ");
@@ -10,68 +10,68 @@
 // };
 // drawCats(10); // Вместо 10 тут может быть другое число
 
-// // Draw cats — рисовать котиков
-// // Function — функция
-// // How many times — сколько раз
+// Draw cats — рисовать котиков
+// Function — функция
+// How many times — сколько раз
 // ___________________________________________;
-// //   2. Lesson;
+//   2. Lesson;
 
-// // ТИПЫ ДАННЫХ И ПЕРЕМЕННЫЕ
+// ! ТИПЫ ДАННЫХ И ПЕРЕМЕННЫЕ
 
-// // Boolean - True & False
+// Boolean - True & False
 
 // let nick; // undefined
 
-// // Undefined — значение не определено
+// Undefined — значение не определено
 
 // let age = 12;
 
-// // Number of siblings — число братьев и сестер
-// // Number of candies — число конфет
+// Number of siblings — число братьев и сестер
+// Number of candies — число конфет
 
 // let numberOfSiblings = 1 + 3;
 // let numberOfCandies = 8;
 // numberOfCandies / numberOfSiblings;
-// // 2
+// 2
 
-// // Reference error — ошибка данных
+// Reference error — ошибка данных
 
-// // Seconds in a minute — секунд в минуте
-// // Minutes in a hour — минут в часе
+// Seconds in a minute — секунд в минуте
+// Minutes in a hour — минут в часе
 
-// //Сколько секунд в часе
+//Сколько секунд в часе
 // let secondsInAMinute = 60;
 // let minutesInAHour = 60;
 // let secondsInAHour = secondsInAMinute * minutesInAHour;
 // secondsInAHour; //60*60 = 3600
 
-// // Hours in a day — часов в день
-// // Сколько секунд в сутках
+// Hours in a day — часов в день
+// Сколько секунд в сутках
 // let hoursInADay = 24;
 // let secondsInADay = secondsInAHour * hoursInADay;
 // secondsInADay; // 24*3600 = 86 400
 
-// // Days in a year — дней в году
+// Days in a year — дней в году
 
-// // Сколько секунд в году
+// Сколько секунд в году
 
 // let daysInAYear = 365;
 // let secondsInAYear = secondsInADay * daysInAYear;
 // secondsInAYear; //86400 * 365 = 31536000
 
-// //Возраст в секундах
+//Возраст в секундах
 
 // let age = 20;
 // age * secondsInAYear; //630720000
 
 // 20 * secondsInAYear; //630720000
 
-// // Инкремент и декремент
+// Инкремент и декремент
 
-// // Увеличение на 1 называют инкрементом,
-// // а уменьшение на 1 — декрементом.
+// Увеличение на 1 называют инкрементом,
+// а уменьшение на 1 — декрементом.
 
-// // High fives — дай пять!
+// High fives — дай пять!
 
 // let highFives = 0;
 // ++highFives;
@@ -79,15 +79,15 @@
 // ++highFives;
 // 2;
 // --highFives;
-// // 1
+// 1
 
-// // Score — счет
+// Score — счет
 
 // let score = 10;
 // score += 7; // 10 + 7 = 17
 // score -= 3; // 17 - 3 = 14
 
-// // Balloon — воздушный шар
+// Balloon — воздушный шар
 
 // let balloons = 100;
 // balloons *= 2; // 200
@@ -95,13 +95,13 @@
 // let balloons = 100;
 // balloons /= 4; // 25
 
-// // СТРОКИ
+// ! СТРОКИ
 
-// // My awesome string — Моя крутая строка
+// My awesome string — Моя крутая строка
 
 // let myAwesomeString = "Что-то ОЧЕНЬ крутое!!!";
 
-// // My thing — моя штука
+// My thing — моя штука
 
 // let myThing = 5;
 // myThing = "это строка";
@@ -179,7 +179,7 @@
 
 // console.log(`${positiveElements(arr)}`); // [10, 20, 1, 5, 12]
 
-// SLICE
+// ! SLICE
 
 // Slice — часть
 
@@ -237,7 +237,7 @@
 // ("Эй, как дела?");
 // console.log(result);
 
-// Булевы значения
+// ! Булевы значения
 
 // true (истина), либо false (ложь)
 
@@ -245,7 +245,7 @@
 // javascriptIsCool;
 // true;
 
-// Логические операции
+// ! Логические операции - 41 page
 
 // && -  and
 
@@ -267,25 +267,45 @@
 // hasApple || hasOrange;
 // true
 
-const status = document.querySelector(".status");
+// ! (НЕ)
+// Оператор ! означает «не» — так его и называйте. Используйте этот опе- ратор, чтобы превратить false в true или, наоборот, true в false. Это полезно для работы со значениями-противоположностями. Например:
 
-let online = () => {
-  status.innerHTML = "Connection Avaliable";
-  status.style.backgroundColor = "#77D970";
-};
+// Is weekend — выходной
+// Need to shower today — нужно принять душ сегодня
 
-let offline = () => {
-  status.innerHTML = "No Connection";
-  status.style.backgroundColor = "#E024";
-};
+// var isWeekend = true;
+// var needToShowerToday = !isWeekend;
+// needToShowerToday;
+// console.log(needToShowerToday);
+// false
 
-// window.navigator.online - возврощает онлайн статус браузера
+// Should go to school — нужно идти в школу
 
-if (window.navigator.online) {
-  online();
-} else {
-  offline();
-}
+// var isWeekend = false;
+// var hadShower = true;
+// var hasApple = false;
+// var hasOrange = true;
+// var shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
+// shouldGoToSchool;
+// true
 
-window.addEventListener("online", online);
-window.addEventListener("offline", offline);
+// ! Сравнение чисел с помощью булевых значений
+
+// Если Высота меньше 150 тогда false
+
+// Height — высота
+// Height restriction — ограничение по росту
+
+// var height = 155;
+// var heightRestriction = 150
+// height >= heightRestriction
+// true
+
+// Посетителю, рост которого равен 120 см, вход все еще разрешен.
+
+// var height = 120;
+// var heightRestriction = 120;
+// height <= heightRestriction;
+// true
+
+// 46 page
