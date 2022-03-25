@@ -309,3 +309,80 @@
 // true
 
 // 46 page
+
+// число которое загадали 5
+// сравниваем два числа
+// И если число не такое как загадали значит false
+
+// My secret number — мое загаданное число
+// Chico guess — догадка Чико 
+
+// var mySecretNumber = 5;
+// var chicoGuess = 3;
+// mySecretNumber === chicoGuess; // false
+// var harpoGuess = 7;
+// mySecretNumber === harpoGuess; // false
+// var grouchoGuess = 5;
+// mySecretNumber === grouchoGuess // true
+
+/* Сравнивая два числа с помощью ===, вы получаете true, 
+только когда оба числа совпадают.*/
+
+// String number — здесь «строка-число»
+// Actual number — число
+
+// var stringNumber = "5";
+// var actualNumber = 5;
+// stringNumber /*'5'*/ === actualNumber /*5*/ ;
+// false
+// stringNumber == actualNumber;
+// true
+
+// Accompanied — в сопровождении
+
+// task 
+//Задача состоит в том, чтобы определить, 
+//пускать ли зрителя на фильм «с 12 лет и старше» или нет.
+
+// var age = 10;
+// var accompanied = false;
+// if (age >= 12 || age <= 12 && accompanied) {
+//     console.log('u can watch film');
+// } else {
+//     console.log('NO u can`t watch film');
+// }
+
+// ! undefined и null
+
+// JavaScript использует значение undefined, когда не может найти иного значения. Например, если, создав новую переменную, вы не присвоите ей значение с помощью оператора =, ее значением будет undefined:
+
+// My variable — моя переменная
+// My null variable — моя пустая переменная
+
+// var myVariable;
+// myVariable;
+// undefined
+
+// А значение null обычно используется, чтобы явно обозначить — «тут пусто».
+
+// var myNullVariable = null;
+// myNullVariable;
+// null
+
+// ! Массивы //
+
+// My top three dinosaurs — три моих любимых динозавра
+
+// var myTopThreeDinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр"]; 
+
+var dinosaurs = [
+    "Тираннозавр",
+    "Велоцираптор",
+    "Стегозавр",
+    "Брахиозавр",
+    "Трицератопс",
+    "Птеранодон",
+    "Апатозавр",
+    "Диплодок",
+    "Компсогнат"
+];
