@@ -3,8 +3,8 @@
 // COMMAND + OPTION + J.
 
 // Рисуем столько котиков, сколько захотим!
-// var drawCats = function (howManyTimes) {
-//   for (var i = 0; i < howManyTimes; i++) {
+// let drawCats = function (howManyTimes) {
+//   for (let i = 0; i < howManyTimes; i++) {
 //     console.log(i + " =^.^= ");
 //   }
 // };
@@ -185,7 +185,7 @@
 
 // Long string — длинная строка
 
-// var longString = "Эта длинная строка такая длинная";
+// let longString = "Эта длинная строка такая длинная";
 // longString.slice(4, 18);
 // ("длинная строка");
 
@@ -237,11 +237,11 @@
 // ("Эй, как дела?");
 // console.log(result);
 
-// ! Булевы значения
+// ! Булевые значения
 
 // true (истина), либо false (ложь)
 
-// var javascriptIsCool = true;
+// let javascriptIsCool = true;
 // javascriptIsCool;
 // true;
 
@@ -252,18 +252,18 @@
 // || - or
 
 // Had shower — принял душ
-// Has backback — есть рюкзак
+// Has backpack — есть рюкзак
 
-// var hadShower = true;
-// var hasBackpack = false;
+// let hadShower = true;
+// let hasBackpack = false;
 // hadShower && hasBackpack;
 // false
 
 // Has apple — есть яблоко
 // Has orange — есть апельсин
 
-// var hasApple = true;
-// var hasOrange = false;
+// let hasApple = true;
+// let hasOrange = false;
 // hasApple || hasOrange;
 // true
 
@@ -273,19 +273,19 @@
 // Is weekend — выходной
 // Need to shower today — нужно принять душ сегодня
 
-// var isWeekend = true;
-// var needToShowerToday = !isWeekend;
+// let isWeekend = true;
+// let needToShowerToday = !isWeekend;
 // needToShowerToday;
 // console.log(needToShowerToday);
 // false
 
 // Should go to school — нужно идти в школу
 
-// var isWeekend = false;
-// var hadShower = true;
-// var hasApple = false;
-// var hasOrange = true;
-// var shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
+// let isWeekend = false;
+// let hadShower = true;
+// let hasApple = false;
+// let hasOrange = true;
+// let shouldGoToSchool = !isWeekend && hadShower && (hasApple || hasOrange);
 // shouldGoToSchool;
 // true
 
@@ -296,15 +296,15 @@
 // Height — высота
 // Height restriction — ограничение по росту
 
-// var height = 155;
-// var heightRestriction = 150
+// let height = 155;
+// let heightRestriction = 150
 // height >= heightRestriction
 // true
 
 // Посетителю, рост которого равен 120 см, вход все еще разрешен.
 
-// var height = 120;
-// var heightRestriction = 120;
+// let height = 120;
+// let heightRestriction = 120;
 // height <= heightRestriction;
 // true
 
@@ -317,12 +317,12 @@
 // My secret number — мое загаданное число
 // Chico guess — догадка Чико 
 
-// var mySecretNumber = 5;
-// var chicoGuess = 3;
+// let mySecretNumber = 5;
+// let chicoGuess = 3;
 // mySecretNumber === chicoGuess; // false
-// var harpoGuess = 7;
+// let harpoGuess = 7;
 // mySecretNumber === harpoGuess; // false
-// var grouchoGuess = 5;
+// let grouchoGuess = 5;
 // mySecretNumber === grouchoGuess // true
 
 /* Сравнивая два числа с помощью ===, вы получаете true, 
@@ -331,8 +331,8 @@
 // String number — здесь «строка-число»
 // Actual number — число
 
-// var stringNumber = "5";
-// var actualNumber = 5;
+// let stringNumber = "5";
+// let actualNumber = 5;
 // stringNumber /*'5'*/ === actualNumber /*5*/ ;
 // false
 // stringNumber == actualNumber;
@@ -344,8 +344,8 @@
 //Задача состоит в том, чтобы определить, 
 //пускать ли зрителя на фильм «с 12 лет и старше» или нет.
 
-// var age = 10;
-// var accompanied = false;
+// let age = 10;
+// let accompanied = false;
 // if (age >= 12 || age <= 12 && accompanied) {
 //     console.log('u can watch film');
 // } else {
@@ -356,33 +356,595 @@
 
 // JavaScript использует значение undefined, когда не может найти иного значения. Например, если, создав новую переменную, вы не присвоите ей значение с помощью оператора =, ее значением будет undefined:
 
-// My variable — моя переменная
-// My null variable — моя пустая переменная
+// My letiable — моя переменная
+// My null letiable — моя пустая переменная
 
-// var myVariable;
-// myVariable;
+// let myletiable;
+// myletiable;
 // undefined
 
 // А значение null обычно используется, чтобы явно обозначить — «тут пусто».
 
-// var myNullVariable = null;
-// myNullVariable;
+// let myNullletiable = null;
+// myNullletiable;
 // null
 
 // ! Массивы //
 
 // My top three dinosaurs — три моих любимых динозавра
 
-// var myTopThreeDinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр"]; 
+// let myTopThreeDinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр"]; 
 
-var dinosaurs = [
-    "Тираннозавр",
-    "Велоцираптор",
-    "Стегозавр",
-    "Брахиозавр",
-    "Трицератопс",
-    "Птеранодон",
-    "Апатозавр",
-    "Диплодок",
-    "Компсогнат"
-];
+// let dinosaurs = [
+//     "Тираннозавр",
+//     "Велоцираптор",
+//     "Стегозавр",
+//     "Брахиозавр",
+//     "Трицератопс",
+//     "Птеранодон",
+//     "Апатозавр",
+//     "Диплодок",
+//     "Компсогнат"
+// ];
+
+// Доступ к элементу масива
+
+// dinosaurs[2]; // Стегозавр
+// dinosaurs[2] = 'Ed';
+
+// Test how to push elements for array
+
+// let dinosaurs = [];
+// dinosaurs[0] = '1'
+// dinosaurs[1] = '2'
+
+// let dinosaurs = [
+//     "Тираннозавр",
+//     "Велоцираптор",
+//     "Стегозавр",
+//     "Брахиозавр",
+//     "Трицератопс",
+//     "Птеранодон",
+//     "Апатозавр",
+//     "Диплодок",
+//     "Компсогнат"
+// ];
+
+// dinosaurs[33] = 'REkA'
+// console.log(dinosaurs);
+
+// let dinosaursAndNumbers = [3, "динозавры", ["трицератопс", "стегозавр", 3627.5], 10];
+// dinosaursAndNumbers[0]
+// console.log(dinosaursAndNumbers[2][2]);
+
+// ! Длина массива - length array //
+
+// let maniacs = ["Якко", "Вакко", "Дот"];
+// maniacs[0];
+// // "Якко"
+// maniacs[1];
+// // "Вакко"
+// maniacs[2];
+// // "Дот"
+// console.log(maniacs.length)
+// console.log(maniacs[maniacs.length]);
+
+// ! Добавление элементов в массив //
+
+// Push — буквально «протолкнуть, добавить»
+// Animals — животные
+
+// PUSH - Метод
+
+// let animals = [];
+// animals.push("Кот");
+// animals.push("Пес");
+// animals.push("Лама");
+// animals;
+// ["Кот", "Пес", "Лама"]
+// console.log(animals);
+
+/* Чтобы добавить элемент в начало массива,
+используйте метод .unshift(элемент): */
+
+// animals = ["Cat", "Пес", "Лама"]
+// animals[0]; // Cat
+// animals.unshift("Мартышка"); // 4
+
+// console.log(animals);
+
+// ! Удаление элементов массива //
+
+// Pop — буквально «выдавить»
+// Last animal — последнее животное
+
+// Убрать из массива последний элемент можно, добавив к его имени .pop()
+
+// При вызове animals.pop() в строке последний элемент массива animals, 
+// "Лама", был возвращен и сохранен в переменной lastAnimal.
+
+// let animals = ["Белый медведь", "Мартышка", "Кот", "Пес", "Лама"]
+
+// let lastAnimal = animals.pop(); // delete 4 element/ Лама
+// animals.unshift(lastAnimal);
+// console.log(animals);
+
+// ! SHIFT()  //
+
+// Чтобы удалить из массива первый элемент, вернув его значение, используйте .shift():
+
+// Методы unshift и shift добавляют и 
+// удаляют элементы с начала массива — так же как push и pop добавляют и удаляют элементы с конца.
+
+// ! Объединение массивов //
+
+// First Array — первый массив
+// Other Array — другой массив
+// Furry animals — пушистые животные
+// Scaly animals — чешуйчатые животные
+// Furry and scaly animals — пушистые и чешуйчатые животные
+
+// let fistArray = ['1', '2', '3', '4', '5']
+// let secondArray = ['6', '7', '8', '9', '10']
+// let threeArray = ['Ed', 'Sekan']
+// let concatTwoArrays = fistArray.concat(secondArray, fistArray, threeArray);
+// console.log(concatTwoArrays);
+
+// ! Поиск индекса элемента в массиве //
+
+// let colors = ['red', 'green', 'blue'];
+// let findIndexColors = colors.indexOf("red")
+
+// console.log(findIndexColors);
+
+// Метод indexOf похож на квадратные скобки, 
+// только здесь все наобо- рот: команда colors[2] вернет "синий", 
+// а colors.indexOf("синий") вернет 2.
+
+// colors[2]; //"синий"
+// colors.indexOf("синий"); // 2
+
+// Если элемента, индекс которого вы запрашиваете, в массиве нет, 
+// JavaScript вернет значение −1.
+
+// ! Превращаем массив в строку
+
+// .join() - метод чтобы соеденить все элементы масива в одну строку
+
+// Insects — насекомые
+// Join — соединить
+// Boring animals — скучные животные
+
+// let boringAnimals = ["Мартышка", "Кот", "Рыба", "Ящерица"];
+
+// console.log(boringAnimals.join("--")); // Make sting
+
+// Нам поможет метод .join ("Любое слово или Символ который будет разделять строки"), 
+// который делает все то же самое,
+// но вместо запятых ставит между элементами выбранный
+
+// My Tests
+// let arraysMethods = ['pop', 'push', 'shift', 'unshift', 'concat', 'indexOf', 'join', 'length']
+// let joinArr = arraysMethods.join(', ')
+// console.log(joinArr.replace('pop', 5))
+
+// ! Поиск дороги домой
+
+// На сленге программистов этот способ называется «последним вошел, 
+// первым вышел», английская аббревиатура LIFO (last in, first out). 
+// Есть и альтернативный подход — «первым вошел, первым вышел», 
+// аббревиатура FIFO (first in, first out). 
+// Его также называют очередью, 
+// поскольку таким же образом устроены оче-реди — первый человек, 
+// вставший в очередь, будет первым, кото- рого обслужат.
+
+// Landmarks — заметные объекты
+
+// let landmarks = [];
+// landmarks.push("Мой дом");
+// landmarks.push("Дорожка к дому");
+// landmarks.push("Мигающий фонарь");
+// landmarks.push("Протекающий гидрант");
+// landmarks.push("Пожарная станция");
+// landmarks.push("Приют для кошек");
+// landmarks.push("Моя бывшая школа");
+// landmarks.push("Дом подруги");
+// landmarks.pop(); //"Дом подруги"
+// landmarks.pop(); //"Моя бывшая школа"
+// landmarks.pop(); //"Приют для кошек"
+// landmarks.pop(); //"Пожарная станция"
+// landmarks.pop(); //"Протекающий гидрант"
+// landmarks.pop(); //"Мигающий фонарь"
+// landmarks.pop(); //"Дорожка к дому"
+// // landmarks.pop(); //"Мой дом"
+// console.log(landmarks, 'Дорога домой найдена');
+
+// ! Случайный выбор
+// || Использование Math.random() ||
+// Math random — случайное число
+// Random words — случайные слова
+// Random index — случайный индекс
+// Phrases — фразы
+
+// console.log(Math.random() * 10);
+
+// Округление с помощью Math.floor()
+// Math floor — целая часть числа
+
+// Math.floor(3.7463463);
+
+// let maths = Math.random() * 10
+// let twoCount = Math.floor(maths)
+
+// console.log(maths);
+// console.log(twoCount);
+
+// let random = Math.floor(Math.random() * 4);
+// console.log(random);
+
+// let randomWords = ["Защита", "Стрела", "Атака", "Мимо"];
+
+// let randomIndex = Math.floor(Math.random() * 4);
+// let result = randomWords[randomIndex]
+// console.log(result);
+
+// let test = randomWords[Math.floor(Math.random() * 4)];
+// console.log(test);
+
+// ! Программа случайного выбора вариантов
+// Phrases — фразы
+// let phrases = [
+//     "Звучит неплохо",
+//     "Да, это определенно надо сделать",
+//     "Не думаю, что это хорошая идея",
+//     "Может, не сегодня?",
+//     "Компьютер говорит нет"
+// ];
+// let answerRandom = phrases[Math.floor(Math.random() * 5)];
+// console.log('Мне выпить еще молочного коктейля?', answerRandom);
+// console.log('Мне пора делать домашнюю работу?', answerRandom);
+
+// ! Генератор случайных дразнилок
+
+// Random body part — случайная часть тела
+// Random adjective — случайное прилагатель- ное
+// Random insult — случайная дразнилка
+
+// let randomBodyParts = ["глаз", "нос", "череп", "лоб", "Зуб"];
+// let randomAdjectives = ["красивая", "унылая", "смешная"];
+// let randomWords = ["муха", "выдра", "птичка", "мартышка", "крыса", "гавнa"];
+
+// // Выбор случайной части тела из массива randomBodyParts:
+// let randomBodyPart = randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)];
+
+// // Выбор случайного прилагательного из массива randomAdjectives:
+// let randomAdjective = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)];
+
+// // Выбор случайного слова из массива randomWords:
+// let randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
+
+// // Соединяем случайные строки в предложение:
+// let randomInsult = "У тебя " + randomBodyPart + " словно " +
+//     randomAdjective + " " + randomWord + "!!!";
+// console.log(randomInsult);
+
+// let randomInsult = ["У тебя", randomBodyPart, "словно", randomAdjective, randomWord + "!!!"].join(" ");
+// "У тебя череп словно дурацкая дубина!!!"
+// console.log(randomInsult);
+
+// ! УПРАЖНЕНИЯ // DONE
+// Чтобы укрепить знания, полученные в этой главе, выполните эти упражнения.
+
+// #1. Новые дразнилки
+// Сделайте генератор случайных дразнилок со своим набором слов.
+
+// #2. Изощренные дразнилки
+// Усовершенствуйте генератор дразнилок, чтобы он создавал драз-нилки такого типа: «У тебя [часть тела] еще более [прилагатель-ное], чем [часть тела животного] у [животное]».
+// Подсказка: нужно будет создать еще один массив.
+
+// #3. Оператор + или join?
+// Сделайте две версии своего генератора дразнилок: 
+// одна пусть использует для составления дразнилки оператор +, 
+// а другая соз- дает массив со словами и соединяет их 
+// через пробел с помощью join. 
+// Какой вариант вам больше нравится и почему?
+
+// #4. Соединение чисел
+// Как с помощью метода join превратить массив[3,2,1]в строку "3 больше, чем 2 больше, чем 1"?
+
+// let arr = [3, 2, 1].join(" > ")
+// console.log(arr);
+
+// My first Random Game
+
+// let newArrays = ['Конфетка', 'Солнышко', 'Сердце', 'Любовь'];
+// let animalsArrays = ['Черепаха', 'Ежик', 'Мишка'];
+// let goodWords = ['Добрая', 'Хорошая', 'Любимая', 'Лучшая']
+
+// let newArr = newArrays[Math.floor(Math.random() * newArrays.length)]
+// let animalsArray = animalsArrays[Math.floor(Math.random() * animalsArrays.length)]
+// let goodWord = goodWords[Math.floor(Math.random() * goodWords.length)]
+// let randomGame1 = "Ты " + newArr + ", словно " + animalsArray + " и так же ты самая " + goodWord;
+// let randomGame = ["Ты ", newArr + ", словно ", animalsArray, " и так же ты самая ", goodWord].join(" ")
+
+// console.log(randomGame);
+
+// ! Объекты
+// Создание объектов
+
+// Литерал объекта — это быстрый способ создания объекта вместе с его содержимым.
+
+// Cat — кошка 
+// Legs — ноги
+// Color — цвет
+// Key — ключ
+// Full name — полное имя
+
+// Ключ обязательно должен быть стрингой
+// а Значение может быть любого типа
+
+// let cat = {
+//     "legs": 3,
+//     "name": "Гармония",
+//     "color": "Черепаховый"
+// };
+
+// можно писать без кавычек
+// let cat = {
+//     legs: 3,
+//     name: "Гармония",
+//     color: "Черепаховый"
+// };
+
+// ! Доступ к значениям внутри объектов
+
+// Object.keys(anyObject) возвращает массив, содержащий все ключи объекта.
+
+// Object key — ключ объекта
+// Dog — пес 
+// Bark — лай
+
+// let cat = {
+//     "legs": 3,
+//     "name": "Гармония",
+//     "color": "Черепаховый"
+// };
+
+// console.log(cat["name"]); // Гармония
+// console.log(cat.name);    // Гармония
+// console.log(Object.keys(cat));
+// Object.keys - // Функция чтобы проверить какие есть ключи в обьекте
+
+// let dog = { name: "Оладушек", age: 6, color: "белый", bark: "Гав тяф тяф!" };
+// let cat = { name: "Гармония", age: 8, color: "черепаховый" };
+
+// console.log(Object.keys(dog));
+// ["name", "age", "color", "bark"]
+// console.log(Object.keys(cat));
+// ["name", "age", "color"]
+
+// let cat = {};
+// cat["legs"] = 3;
+// cat["name"] = "Гармония";
+// cat["color"] = "Черепаховый";
+
+// console.log(cat);
+
+// ! Добавление ключей через точку
+
+// Is awesome — классный
+// Is brown — коричневый
+
+// let cat = {};
+// cat.legs = 3;
+// cat.name = "Гармония";
+// cat.color = "Черепаховый";
+
+// ! Массивы объектов
+// Period — период
+
+// var dinosaurs = [
+//     { name: "Тираннозавр рекс", period: "Верхнемеловой" },
+//     { name: "Стегозавр", period: "Верхнеюрский" },
+//     { name: "Платеозавр", period: "Триасовый" }
+// ];
+
+// console.log(dinosaurs[2]["name"]);
+// console.log(dinosaurs[0].name);
+
+// Точечную нотацию можно использовать только с объектами, 
+// для массивов она не подходит.
+
+
+// ! Массив друзей
+
+// Lucky numbers — счастливые числа
+// Friends — друзья
+// Array — массив
+
+// let anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16] };
+// let dave = { name: "Дэйв", age: 5, luckyNumbers: [3, 9, 40] };
+// let kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3] };
+// let friends = [anna, dave, kate];
+
+// console.log(anna.luckyNumbers[1]);
+// console.log(friends[1].name);
+// console.log(friends[0].luckyNumbers[1]);
+
+// Что полезного можно сделать с объектами
+
+// ! Учет долгов
+
+// Owed money — одолженная сумма денег
+
+// let owedMoney = { name: 'Kolya' };
+// owedMoney["Kolya"] = 120;
+// owedMoney["Kolya"] += 300;
+
+// console.log(owedMoney.name + ' должен: ' + owedMoney["Kolya"] + 'grn');
+
+
+// ! Хранение информации о фильмах
+
+// Movies — фильмы
+// Release date — дата выхода
+// Duration — продолжи- тельность
+// Actors — в ролях
+// Format — формат
+
+// let movies = {
+//     "В поисках Немо": {
+//         releaseDate: 2003,
+//         duration: 100,
+//         actors: ["Альберт Брукс", "Эллен Дедженерес", "Александр Гоулд"],
+//         format: "DVD"
+//     },
+//     "Звездные войны: Эпизод VI — Возвращение джедая": {
+//         releaseDate: 1983,
+//         duration: 134,
+//         actors: ["Марк Хэмилл", "Харрисон Форд", "Кэрри Фишер"],
+//         format: "DVD"
+//     },
+//     "Гарри Поттер и Кубок огня": {
+//         releaseDate: 2005,
+//         duration: 157,
+//         actors: ["Дэниел Рэдклифф", "Эмма Уотсон", "Руперт Гринт"],
+//         format: "Blu-ray"
+//     }
+// };
+
+// let findingNemo = movies["В поисках Немо"];
+// console.log(findingNemo.duration); //100
+// console.log(findingNemo.format); //"DVD"
+
+// let cars = {
+//     releaseDate: 2006,
+//     duration: 117,
+//     actors: ["Оуэн Уилсон", "Бонни Хант", "Пол Ньюман"],
+//     format: "Blu-ray"
+// };
+// movies["Тачки"] = cars;
+
+// console.log(Object.keys(movies));
+
+// ! УПРАЖНЕНИЯ
+
+// My crazy object — мой нелепый объект
+// Some array — какой-то массив
+// Purpose — цель
+// Random animal — случайное животное
+
+// ! #1 Подсчет очков
+// Представьте, что вы играете в какую - нибудь игру
+// со своими друзьями и вам нужно вести счет.
+// Создайте для этого объект и назовите его scores.
+// Пусть ключами будут имена ваших друзей, 
+// а значениями — набранные ими очки(0 или больше).
+// Счет игроков надо будет увеличивать по мере того, 
+// как они зарабатывают новые очки.
+// Как вы будете менять счет игрока, 
+// хранящийся в объекте scores ?
+
+// let scores = {
+//     kolya: '0',
+//     sanya: '0',
+//     david: '0',
+// };
+// scores.kolya = +10;
+// scores.sanya = -20;
+// scores.david = 50;
+// console.log(scores);
+
+
+// ! #2. Вглубь объектов и массивов
+// Пускай у вас есть такой объект:
+
+// let myCrazyObject = {
+//     "name": "Нелепый объект",
+//     "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+//     "random animal": "Банановая акула"
+// };
+
+// let result = myCrazyObject["some array"][2].number; // 123
+// console.log(result);
+
+// Как одной строкой JavaScript - кода извлечь из этого объекта число 123 ? 
+// Проверьте свое решение, запустив его в консоли.
+
+// ! УСЛОВИЯ И ЦИКЛЫ
+
+// Script — скрипт, сценарий
+// Message — сообщение
+
+//  УСЛОВИЕ
+// Условная конструкция представляет собой команду: «если что-то истинно (true), сделай это, иначе сделай то». 
+// Пример: выпол- нив домашнее задание, вы можете съесть мороженое, но, если домашнее задание не готово, мороженое вам не светит.
+
+// А ЦИКЛ
+// это инструкция: «до тех пор, пока что-то истинно (true), продолжай делать это». 
+// Пример: пока вы испытываете жажду, продолжайте пить воду.
+
+
+// ! Условные конструкции
+
+//If — если If... else —
+// если... иначе
+
+// let name = "Николаqqqqqqq";
+// console.log("Привет, " + name);
+// if (name.length > 6) {
+//     console.log("Ну и длиннющее же у вас имя!");
+// } else {
+//     console.log("Имя у вас не из длинных.");
+// }
+
+// let lemonChicken = false;
+// let beefWithBlackBean = true;
+// let sweetAndSourPork = false;
+// if (lemonChicken) {
+//     console.log("Отлично! Я буду курицу с лимоном!");
+// } else if (beefWithBlackBean) {
+//     console.log("Заказываю говядину.");
+// } else if (sweetAndSourPork) {
+//     console.log("Ладно, закажу свинину.");
+// } else {
+//     console.log("Что ж, остается рис с яйцом.");
+// }
+
+// ! ПОПРОБУЙТЕ!
+// Напишите программу с переменной name. 
+// Если в этой переменной находится ваше имя, 
+// напечатайте: «Привет мне!» — иначе напечатайте: «Привет, незнакомец!» 
+// (Подсказка: используйте === для сравнения переменной name с вашим именем.)
+
+// Теперь дополните программу, чтобы она здоровалась с вашим папой,
+// если в name его имя, и с вашей мамой, если в name ее имя. 
+// Если же там что-то иное, по-прежнему печатайте «Привет, незнакомец!».
+
+// let name = 'Ed';
+// if (name === 'Ed') {
+//     console.log('Привет Привет мне!!');
+// } else if (name === 'Dariy') {
+//     console.log('Привет Привет мне!!')
+// } else if (name === 'Olga') {
+//     console.log('Привет Привет мне!!')
+// } else {
+//     console.log('Привет, незнакомец!');
+// }
+
+// ! Циклы
+
+// Циклы, с другой стороны, позволяют выполнять фрагмент кода многократно — 
+// до тех пор, пока некое условие дает true. 
+// Примеры: до тех пор, пока в тарелке есть пища, следует продолжать есть; 
+// до тех пор, пока на лице грязь,  следует продолжать умываться.
+
+// Цикл while
+
+// While — до тех пор, пока
+
+// Используя цикл while, мы имеем в виду следующее: 
+// «Продолжай делать это, пока условие дает true. 
+// Но если оно даст false, остановись».
+
+// 102 page

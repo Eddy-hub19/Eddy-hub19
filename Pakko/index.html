@@ -5,18 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сode word</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Pakko</title>
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <a href="">
-                <img src="./images/logo.svg" alt="">
-            </a>
-        </div>
-    </header>
+    <h3>Попробуй выключить <em>wifi</em></h3>
+    <p title="status" class="status"></p>
 </body>
+<script>
+    const status = document.querySelector(".status");
+
+    let online = () => {
+        status.innerHTML = "Connection Avaliable";
+        status.style.backgroundColor = "#77D970";
+    };
+
+    let offline = () => {
+        status.innerHTML = "No Connection";
+        status.style.backgroundColor = "#E024";
+    };
+
+    // window.navigator.online - возврощает онлайн статус браузера
+
+    if (window.navigator.online) {
+        offline();
+    } else {
+        online();
+    }
+
+    window.addEventListener("online", online);
+    window.addEventListener("offline", offline);
+</script>
 
 </html>
