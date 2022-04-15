@@ -743,7 +743,7 @@
 // ! Массивы объектов
 // Period — период
 
-// var dinosaurs = [
+// let dinosaurs = [
 //     { name: "Тираннозавр рекс", period: "Верхнемеловой" },
 //     { name: "Стегозавр", period: "Верхнеюрский" },
 //     { name: "Платеозавр", period: "Триасовый" }
@@ -948,3 +948,165 @@
 // Но если оно даст false, остановись».
 
 // 102 page
+
+// Sheep counted — посчитанные овцы
+
+// let sheepCounted = 0;
+// while (sheepCounted <= 10) {
+//     console.log("Посчитано овец: " + sheepCounted + "!");
+//     sheepCounted++;
+// }
+// console.log("Sleeep");
+
+// ! Бесконечный цикл
+
+// Имея дело с циклами, помните: если условие никогда не даст false, цикл будет повторяться бесконечно
+
+// ! Цикл for
+
+// For — для
+
+// в составе цикла for есть три выражения, 
+// разделенные точками с запятой: 
+// это настройка, - Настройка до запуска цикла,Создается переменная с значением
+// проверка условия - Проверяет Истина ли в условии, в данном случае ' 0 < меньше 10 ? '  true
+// приращение - i++ - выполянется после каждой итерации и увеличивает переменную на + 1
+
+// for (let sheepCounted = -10; sheepCounted < 10; sheepCounted++) {
+//     console.log("Посчитано овец: " + sheepCounted + '!');
+// }
+// console.log("dedede");
+
+// Times to say hello — сколько раз сказать «привет»
+
+// let timesToSatHello = 3;
+
+// for (let i = 0; i < timesToSatHello; i++) {
+//     console.log("Hello")
+// }
+
+// Цикл for, массивы и строки
+
+// Очень часто цикл for используют для перебора всех элементов массива 
+// или всех символов строки.
+
+// let animals = ["лев", "фламинго", "медведь", "удав"];
+
+// for (let i = 0; i < animals.length; i++) {
+//     console.log("В этом зоопарке есть " + animals[i] + " .");
+// }
+
+// let name = "Nick";
+// for (let i = 0; i < name.length; i++) {
+//     console.log("В моем имени есть буква " + name[i])
+// }
+
+// for (let x = 2; x < 10000; x = x * 2) {
+//     console.log(x)
+// }
+
+// ! ПОПРОБУЙТЕ!
+// Напишите цикл for, который печатает степени тройки, 
+// не превышающие 10 000(программа должна выводить 3, 9, 27 и т.д.)
+// Перепишите это задание, вместо for использовав цикл while. 
+// (Подсказка: установите начальное значение перед входом в цикл.)
+
+// for (let i = 3; i < 10000; i = i * 3) {
+//     console.log(i);
+// }
+
+// let j = 3;
+// while (j < 10000) {
+//     console.log(j);
+//     j = j * 3
+// }
+
+// let arr = ['bmv', 'mers', 'reno'];
+// let arr2 = ['nissan'];
+
+// for (let i = 0; i < arr.length; i++) {
+
+//     arr2.push(arr[i]);
+// }
+// console.log(arr)
+// console.log(arr2.concat(arr))
+
+// ? #1. Прекрасные животные
+
+// let animals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
+
+// for (let i = 0; i < animals.length; i++) {
+//     animals[i] = animals[i] + " - прекрасное животное";
+// }
+// console.log(animals)
+
+// ? #2. Генератор случайных строк
+
+// let alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+// let index = Math.floor(Math.random() * alphabet.length) // Находит Индекс Строки
+// console.log(index);
+
+// let randomWord = alphabet[Math.floor(Math.random() * alphabet.length)] // генерирует рандомную букву
+
+// += - Оператор плюс с присваиванием
+
+// let alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+// let randomString = '';
+// while (randomString.length < 10) {
+//     randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+// }
+// console.log(randomString);
+
+// ? #3. h4ck3r sp34k
+// h4ck3r sp34k — hacker speak — хакерский язык
+// Input — входное значение
+// Output — выходное значение
+// JavasScript is awesome — JavaScript очень классный
+
+// let input = "javascript is awesome";
+// let output = "";
+
+// for (let i = 0; i < input.length; i++) {
+
+//     if (input[i] === "e") {
+//         output += '3'
+//     } else if (input[i] === 'a') {
+//         output += '4'
+//     } else if (input[i] === "i") {
+//         output += "1"
+//     } else if (input[i] === "o") {
+//         output += "0"
+//     } else {
+//         output += input[i]
+//     }
+// }
+// console.log(input);
+// console.log(output)
+
+
+// ! ПИШЕМ ИГРУ «ВИСЕЛИЦА»
+
+// Используем confirm, чтобы получить ответ «да» или «нет»
+// Alert — предупреждение
+
+// let name = prompt("Как вас зовут?");
+// console.log("Привет, " + name);
+
+// let likesCats = confirm("Тебе нравятся кошки?");
+// if (likesCats) {
+//     alert("Ты классная кошка!")
+// } else {
+//     alert("Что ж, не проблема. Все равно ты молодец!")
+// }
+
+// ! Проектирование игры
+
+// ? 1. Случайнымобразомвыбиратьслово.
+// ? 2. Запрашиватьуигрокавариантответа(букву).
+// ? 3. Завершатьигрупожеланиюигрока.
+// ? 4. Проверять, являетсяливведенныйответбуквой.
+// ? 5. Вестиучетугаданныхбукв.
+// ? 6. Показыватьигроку, сколькобуквонугадалисколькоещепред - стоит угадать.
+// ? 7. Завершать игру, если слово отгадано.
+
+// Используем псевдокод для проектирования игры
