@@ -14,4 +14,4 @@ global.app = {
 import { copy } from "./gulp/tasks/copy.js"
 
 // Выполнение сценария по умолчанию
-// gulp.task('default', copy);
+gulp.task('default', copy);
