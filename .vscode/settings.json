@@ -1,6 +1,7 @@
 {
-    "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5500,
     "cSpell.words": [
+        "browsersync",
         "апельсин",
         "братьев",
         "буква",
@@ -83,5 +84,5 @@
         "штука",
         "этот",
         "яблоко"
-    ]
+    ],
 }
