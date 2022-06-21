@@ -8,10 +8,9 @@ export const scss = () => {
 
     return app.gulp.src(app.path.src.scss, {sourcemaps: true})
 
-        .pipe(app.plugins.replace(/@img\//g, '../img/'))
+        // .pipe(app.plugins.replace(/@img\//g, '../img/'))
 
-        .pipe(sass({outputStyle: "expanded"
-        }))
+        .pipe(sass({outputStyle: "expanded"}))
 
         .pipe(rename({
             extname: ".min.css"
