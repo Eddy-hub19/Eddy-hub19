@@ -15,9 +15,9 @@ global.app = {
 
 // Импорт задач
 import { copy } from "./gulp/tasks/copy.js"
-import { reset } from "./gulp/tasks/rest.js"
-import { html } from "./gulp/tasks/html.js"
+import { reset } from "./gulp/tasks/reset.js"
 import { server } from "./gulp/tasks/server.js"
+import { html } from "./gulp/tasks/html.js"
 import { scss } from "./gulp/tasks/scss.js"
 
 // Наблюдатель за изменениями в файлах
