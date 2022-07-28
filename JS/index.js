@@ -160,3 +160,97 @@
 //         }
 //     }
 // } while (user !== "Админ" && password !== "Я админ")
+
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+//   // Change code below this line
+
+//   const totalPrice = orderedQuantity * pricePerDroid + deliveryFee;
+//   console.log(totalPrice);
+//   const message = `You ordered droids worth ${totalPrice} credits.
+//   Delivery (${deliveryFee} credits) is included in total price.`
+
+//   console.log(message);
+//   // Change code above this line
+//   return message;
+// }
+
+// makeOrderMessage(2, 100, 50)
+// makeOrderMessage(4, 300, 100)
+// makeOrderMessage(10, 70, 200)
+
+
+// Проверка пароля
+
+// function isValidPassword(password) {
+//     const SAVED_PASSWORD = "jqueryismyjam"
+//     // Change code below this line
+//     const isMatch = password === SAVED_PASSWORD
+//     // Change code above this line
+//     return isMatch
+// }
+
+// console.log(isValidPassword("jqueryismyjam")); 
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   if (available > ordered) {
+//     message = "Заказ обработан, наш менеджер свяжется с вами."
+
+//   } else {
+//     message = "Недостаточно товара на складе!"
+//   }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkStorage(10, 8));
+
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// // Change code below this line
+// a += 2;
+// b -= 4;
+// c *= 3;
+// d /= 10;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+///////////////////////////////////////////////Applications
+
+// Станция по продаже ремонтных дроидов готова к запуску, осталось написать программное обеспечение для отдела продаж.
+
+// Функция makeTransaction(pricePerDroid, orderedQuantity, customerCredits) выполняет транзакцию по продаже дроидов и возвращает сообщение о результате операции. Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+
+// pricePerDroid - цена одного дроида
+// orderedQuantity - кол-во заказанных дроидов
+// customerCredits - сумма средств на счету клиента
+// Дополни её следующим функционалом:
+
+// Объяви переменную totalPrice для хранения общей суммы заказа и присвой ей выражение расчёта этой суммы.
+// Добавь проверку сможет ли клиент оплатить заказ:
+// если сумма к оплате превышает количество кредитов на счету клиента, запиши в переменную message строку "Insufficient funds!";
+// в противном случае, вычти сумму покупки со счёта клиента и запиши в переменную message сообщение: "You ordered <число> droids, you have <число> credits left".
+
+function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+  let message;
+  // Change code below this line
+  let totalPrice = pricePerDroid * orderedQuantity
+  console.log(totalPrice)
+  // Change code above this line
+  if (totalPrice >= orderedQuantity) {
+    message = "Insufficient funds!"
+  } else if(totalPrice - customerCredits) {
+    message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
+  }
+  return message;
+}
+
+console.log(makeTransaction(3000, 5, 23000));
+
