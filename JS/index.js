@@ -178,7 +178,6 @@
 // makeOrderMessage(4, 300, 100)
 // makeOrderMessage(10, 70, 200)
 
-
 // Проверка пароля
 
 // function isValidPassword(password) {
@@ -189,7 +188,7 @@
 //     return isMatch
 // }
 
-// console.log(isValidPassword("jqueryismyjam")); 
+// console.log(isValidPassword("jqueryismyjam"));
 
 // function checkStorage(available, ordered) {
 //   let message;
@@ -238,19 +237,169 @@
 // если сумма к оплате превышает количество кредитов на счету клиента, запиши в переменную message строку "Insufficient funds!";
 // в противном случае, вычти сумму покупки со счёта клиента и запиши в переменную message сообщение: "You ordered <число> droids, you have <число> credits left".
 
-function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
-  let message;
-  // Change code below this line
-  let totalPrice = pricePerDroid * orderedQuantity
-  console.log(totalPrice)
-  // Change code above this line
-  if (totalPrice >= orderedQuantity) {
-    message = "Insufficient funds!"
-  } else if(totalPrice - customerCredits) {
-    message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
-  }
-  return message;
-}
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//   let message;
+//   // Change code below this line
+//   let totalPrice = pricePerDroid * orderedQuantity
+//   console.log(totalPrice)
+//   // Change code above this line
+//   if (totalPrice >= orderedQuantity) {
+//     message = "Insufficient funds!"
+//   } else if(totalPrice - customerCredits) {
+//     message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
+//   }
+//   return message;
+// }
 
-console.log(makeTransaction(3000, 5, 23000));
+// console.log(makeTransaction(3000, 5, 23000));
 
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+//  if (totalSpent >= 50000) {
+//     discount = GOLD_DISCOUNT
+//   } else if (totalSpent >= 2000 && totalSpent < 50000) {
+//     discount = SILVER_DISCOUNT;
+//   } else if (totalSpent >= 5000 && totalSpent < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else {
+//     discount = BASE_DISCOUNT;
+//   }
+//   // Change code above this line
+//   return discount;
+// }
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam"
+//     let message
+//     // Change code below this line
+
+//     switch (null) {
+//         case password:
+//             password === null
+//             message = "Canceled by user!"
+//             break
+//         case password:
+//             password === ADMIN_PASSWORD
+//             message = "Welcome!"
+//             break
+
+//         default:
+//             message = "Access denied, wrong password!"
+//     }
+
+//     // Change code above this line
+//     return message
+// }
+
+// console.log(checkPassword("jqueryismyjam"))
+
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим элементам или свойствам строки в переменной course.
+
+// courseTopicLength - длина строки.
+// firstElement - первый символ строки.
+// lastElement - последний символ строки.
+
+// Значение переменной courseTopicLength это число 21
+// Объявлена переменная firstElement
+// Значение переменной firstElement это строка "J"
+// Объявлена переменная lastElement
+// Значение переменной lastElement это строка "s"
+
+// const courseTopic = "JavaScript essentials";
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length-1];
+
+// const fruits = ["🍎", "🍇", "🍑", "🍌", "🍋"]
+
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(`${i + 1}:${fruits[i]}`)
+// }
+
+// const numbers = [2, 17, 94, 1, -20, -50, 23, 37]
+// let minNumber = numbers[0]
+// for (const number of numbers) {
+//     if (number < minNumber) {
+//         minNumber = number
+//     }
+// }
+
+// console.log(minNumber)
+
+// const genres = ["Jass", "Blues", "rock`n`roll", "Country"]
+
+// let longWord = genres[0]
+
+// for (const genre of genres) {
+//     if (genre.length > longWord.length) {
+//         longWord = genre
+//     }
+// }
+
+// console.log(longWord)
+
+// const salaries = [200, 450, 600, 150, 300]
+// let total = 0
+
+// for (let i = 0; i < salarieis.length; i++) {
+//     total += salarieis[i]
+// }
+// console.log(total);
+
+// for (const salari of salaries) {
+//     total += salari;
+// }
+
+// const values = "8,11"
+
+// const sidesArr = values.split(",")
+
+// const area = Number(sidesArr[0]) * Number(sidesArr[1])
+
+// console.log(area)
+
+// const names = "Jacob,William,Solomon,Artemis"
+// const phones = "89001234567,89001112233,890055566377,890055566300"
+
+// const namesArr = names.split(", ")
+// const phonesArr = phones.split(",")
+// console.log(phonesArr)
+
+// for (let i = 0; i < namesArr.length; i++) {
+//     console.log(phonesArr[i])
+//     console.log(`${namesArr[i]} - ${phonesArr[i]} `)
+// }
+
+// const string = "Welcome to the future!"
+// const strArr = string.split(' ')
+// const reversStrArr = strArr.reverse();
+// const reverseStr = reversStrArr.join('')
+
+// console.log(strArr)
+
+// const employes = ["Dennis", "Dennis", "Show", "Watkins", "Ray"]
+
+// const filteredEmployees = []
+
+// console.log(employes.indexOf(Dennis));
+// 'Dennis' index -> 0 === indexOf - > 0 // true
+// 'Dennis' index -> 1 === indexOf - > 0 // false
+// 'Show' index -> 2 === indexOf - > 2 // true
+// 'Watkins' index -> 3 === indexOf - > 3 // true
+// 'Ray' index -> 5 === indexOf - > 5 // true
+
+// for (let i = 0; i < employes.length; i++) {
+//     console.log(employes[i], "indexOf")
+//     console.log(employes[i], "indexOf", employes.indexOf(employes[i]))
+
+//     if ((i === employes[i], "indexOf", employes.indexOf(employes[i]))) {
+//         filteredEmployees.push(employes[i])
+//     }
+//     console.log("--------------")
+// }
