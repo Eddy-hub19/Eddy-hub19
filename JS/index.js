@@ -403,3 +403,27 @@
 //     }
 //     console.log("--------------")
 // }
+
+// function getExtremeElements(array) {
+
+// const extremeElements = [array[0], array[array.length - 1]];
+//   return extremeElements
+// }
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]))
+
+// function calculateEngravingPrice(message, pricePerWord) {
+
+//   let messageSplit = message.split(" ")
+//   let messageLength = messageSplit.length;
+//   let totalPrice = messageLength * pricePerWord
+  
+//    return totalPrice
+// }
+
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+
+
+// function slugify(title) {
+// return title.toLowerCase().split(" ").join('-');
+// }
+// console.log(slugify("English for developer"));
