@@ -416,14 +416,139 @@
 //   let messageSplit = message.split(" ")
 //   let messageLength = messageSplit.length;
 //   let totalPrice = messageLength * pricePerWord
-  
+
 //    return totalPrice
 // }
 
 // console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
 
-
 // function slugify(title) {
 // return title.toLowerCase().split(" ").join('-');
 // }
 // console.log(slugify("English for developer"));
+
+// КОМПОЗИЦИЯ МАССИВОВ
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     let newArr = []
+
+//     for (i = 0; i < firstArray.length; i++) {
+//         newArr.push(firstArray[i])
+//     }
+//     for (let j = 0; j < secondArray.length; j++) {
+//         newArr.push(secondArray[j])
+//     }
+
+//     if (newArr.length > maxLength) {
+//         return newArr.slice(0, maxLength)
+//     } else {
+//         return firstArray.concat(secondArray)
+//     }
+// }
+
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 4))
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     let newArr = firstArray.concat(secondArray)
+
+//     if (newArr.length > maxLength) {
+//         return newArr.slice(0, maxLength)
+//     } else {
+//         return newArr
+//     }
+// }
+
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 1))
+
+// function calculateTotal(number) {
+//     let total = 0
+//     for (let i = 0; i <= number; i += 1) {
+//         total += i
+//         // total = total + i
+//     }
+//     return total
+// }
+
+// console.log(calculateTotal(4))
+
+// ЗАДАЧА: ПОИСК САМОГО ДЛИННОГО СЛОВА
+// function findLongestWord(string) {
+//     const stringSplit = string.split(" ")
+//     console.log(stringSplit);
+//     let longestWord = ""
+
+//     for (const word of stringSplit) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word
+//         }
+//     }
+//     return longestWord
+// }
+
+// console.log(findLongestWord("May the force be with you"))
+
+//25
+// function getCommonElements(array1, array2) {
+
+//     let newArr = []
+//     for (let i = 0; i < array1.length; i++) {
+//         if (array2.includes(array1[i])) {
+//             newArr.push(array1[i])
+//         }
+//     }
+
+//     return newArr
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4])) // 2
+
+// ЗАДАЧА: ЧЁТНЫЕ ЧИСЛА
+// function getEvenNumbers(start, end) {
+//     // Change code below this line
+//     let newArr = []
+//     for (let i = start; i <= end; i++) {
+//         if (i % 2 === 0) {
+//             newArr.push(i)
+//         }
+//     }
+//     return newArr;
+// }
+
+// console.log(getEvenNumbers(3, 5, 6, 8))
+
+// function includes(array, value) {
+//     // Change code below this line
+//     for (let i = 0; i < array.length; i += 1) {
+//         if (array[i] === value) {
+//             return true
+//         }
+//     }
+//     return false
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3))
+
+// let totalSpent = 2000
+// let payment = 500
+// let discount = 0
+
+// if (totalSpent >= 100 && totalSpent < 1000) {
+//     console.log("Бронзовый партнер, скидка 2%")
+//     discount = 0.02
+// } else if (totalSpent >= 1000 && totalSpent < 5000) {
+//     console.log("Серебрянный партнер, скидка 5%")
+//     discount = 0.05
+// } else if (totalSpent >= 5000) {
+//     console.log("Золотой партнер,скидка 10%")
+//     discount = 0.1
+// } else {
+//     console.log("Не партнер, скидка 0%")
+// }
+
+// payment -= payment * discount
+
+// console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`)
+
+// totalSpent += payment
+
+// console.log(`Общая сума потраченого в магазине: ${totalSpent}`);
