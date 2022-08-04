@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>--JS--</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./old-projects/Eddy/style.css">
-    <title>Document</title>
-</head>
+    <body>
+        <h1>Виселица!</h1>
+        <!-- <script src="/JavaScriptForKids/index.js"></script> -->
+        <script>
+            let name = prompt("Как вас зовут?")
+            console.log("Привет, " + name)
 
-<body>
-    <!-- header -->
-    <header>
-        <div class="header">
-            <!-- nav -->
-            <nav class="header__nav">
-                <a href="#Home">Home</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Docs">Docs</a>
-                <h1 class="logo">Majob</h1>
-                <a href="About-me">About Me</a>
-                <a href="Contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="main">
-            <img class="img-main " src="./Eddy/img/coding.jpg" alt=" ">
-            <div class="section-top ">
-                <img class="" src="./old-projects/Eddy/img/im.jpeg" alt=" ">
-                <h2>Front-End Developer Sekan Eduard</h2>
-                <button>More</button>
-                <a href="./old-projects/Calculator/index.html">Calculator</a>
-            </div>
-            <section class="button-sections">
-                <div class="button-sections__btn">
-                    <button class="btn ">
-                        <span class="arrow-left">&#8592;</span>
-                    </button>
-                    <button class="btn ">
-                        <span class="arrow-right">&#8594;</span>
-                    </button>
-                </div>
-            </section>
-        </div>
-    </main>
-    <div style="text-align: center;" id="Docs" class="section3">
-        <h2>Docs</h2>
-        <blockquote>"ED Prodaction"</blockquote>
-    </div>
-    <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/4ac3930615.js" crossorigin="anonymous"></script>
-</body>
+            confirm(`Не желаете ссыграть ${name} ?`)
 
+            // Создаем массив со словами
+            let words = ["программа", "макака", "прекрасный", "оладушек"]
+            // Выбираем случайное слово
+            let word = words[Math.floor(Math.random() * words.length)]
+            // Создаем итоговый массив
+            let answerArray = []
+            for (let i = 0; i < word.length; i++) {
+                answerArray[i] = "_"
+            }
+
+            let remainingLetters = word.length
+
+            // Основной код
+
+            // Игровой цикл
+            while (remainingLetters > 0) {
+                // Показываем состояние игры
+                alert(answerArray.join(" "))
+                // Запрашиваем вариант ответа
+                let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.")
+
+                if (guess === null) {
+                    // Выходим из игрового цикла
+                    break
+                } else if (guess.length !== 1) {
+                    alert("Пожалуйста, введите только одну букву.")
+                } else {
+                    // Обновляем состояние игры
+                    for (let j = 0; j < word.length; j++) {
+                        if (word[j] === guess) {
+                            // вхождения угаданной буквы
+                            answerArray[j] = guess
+                            // Обновляем answerArray и remainingLetters для каждого
+                            remainingLetters--
+                        }
+                    }
+                }
+            }
+            // Конец игрового цикла
+            alert(answerArray.join(" "))
+            alert(`Отлично! поздровляю ${name} !!! было загадано слово " + ${word}`)
+        </script>
+    </body>
 </html>
