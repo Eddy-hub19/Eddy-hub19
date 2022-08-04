@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>--JS--</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./JavaScriptForKids/style.css" />
     </head>
 
     <body>
@@ -43,6 +43,8 @@
                     break
                 } else if (guess.length !== 1) {
                     alert("Пожалуйста, введите только одну букву.")
+                } else if (typeof guess === "string") {
+                    alert("Пожалуйста, введите букву.")
                 } else {
                     // Обновляем состояние игры
                     for (let j = 0; j < word.length; j++) {
@@ -57,7 +59,7 @@
             }
             // Конец игрового цикла
             alert(answerArray.join(" "))
-            alert(`Отлично! поздровляю ${name} !!! было загадано слово " + ${word}`)
+            alert(`Отлично! поздровляю ${name} !!! было загадано слово " ${word}`)
         </script>
     </body>
 </html>
