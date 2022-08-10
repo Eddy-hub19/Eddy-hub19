@@ -552,3 +552,249 @@
 // totalSpent += payment
 
 // console.log(`Общая сума потраченого в магазине: ${totalSpent}`);
+
+// const courses = ["js", "node.js", "html", "css", 'html', 'js', 'node.js', 'js']
+
+// const stats = {};
+
+// for (const course of courses) {
+//   if (stats[course]) {
+//     stats[course] += 1
+//   } else {
+//     stats[course] = 1
+//   }
+// }
+// console.log(stats);
+
+// const salaries = {
+//     John: 100,
+//     Anna: 160,
+//     Peter: 130,
+// }
+
+// const developperSalaries = Object.create(salaries)
+
+// developperSalaries.Obivan = 200
+// developperSalaries.Yoda = 500
+// developperSalaries.Chybaka = 50
+// developperSalaries.DartVaider = 250
+
+// for (const key in developperSalaries) {
+//     console.log(key)
+//     console.log(developperSalaries.hasOwnProperty(key))
+//     console.log("-----")
+// }
+
+// for (const key in developperSalaries) {
+//   if (developperSalaries.hasOwnProperty(key)) {
+//     console.log(developperSalaries);
+//   }
+// }
+
+// const playlist = {
+//     name: "Мой супер плейлист",
+//     rating: 5,
+//     tracks: ["трек-1", "трек-2", "трек-3"],
+//     trackCount: 3,
+//     changeName(newName) {
+//         // console.log('this внутри changeName: ', this);
+//         this.name = newName
+//     },
+//     addTrack(track) {
+//         this.tracks.push(track)
+//     },
+//     updateRating(updateRating) {
+//         this.rating = updateRating
+//     },
+//     getTrackCount() {
+//         return this.tracks.length
+//     },
+// }
+
+// playlist.changeName("New Name")
+
+// playlist.addTrack("New Track", "New Track2", "New Track3")
+
+// playlist.updateRating(7)
+// console.log(playlist.getTrackCount())
+
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// }
+
+// let totalFeedback = 0
+
+// const keys = Object.keys(feedback)
+// for (const key of keys) {
+//   console.log(key);
+//   console.log(feedback[key]);
+
+//   totalFeedback += feedback[key]
+// }
+
+// console.log("totalFeedback: ", totalFeedback);
+
+// const values = Object.values(feedback)
+
+// console.log(values)
+
+// for (const value of values) {
+//     totalFeedback += value
+// }
+// console.log(totalFeedback)
+
+// Object.values - для значений
+// Object.keys - для ключей
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ]
+
+// console.table(friends)
+
+// const findFriendByName = function (allFriends, name) {
+//     for (const friend of allFriends) {
+//         console.log(friend)
+//         console.log(friend.name)
+
+//         if (friend.name === name) {
+//             return "НАШЛИИ!"
+//         }
+//     }
+// }
+
+// console.log(findFriendByName(friends, "Poly"))
+// console.log(findFriendByName(friends, "Chelsy"))
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ]
+
+// const getAllNames = function (allFriends) {
+//     const names = []
+
+//     for (const friend of allFriends) {
+//         console.log(friend.name)
+
+//         names.push(friend.name)
+//     }
+
+//     return names
+// }
+
+// console.log(getAllNames(friends))
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ]
+
+// const getOnlineFriends = function (allFriends) {
+//     const offlineFriends = []
+//     for (const friend of allFriends) {
+//         console.log(friend)
+//         if (!friend.online) {
+//             console.log("-----------------------------------")
+//             offlineFriends.push(friend)
+//         } else {
+//             console.log("false")
+//         }
+//     }
+
+//     return offlineFriends
+// }
+
+// console.table(getOnlineFriends(friends))
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ]
+
+// const getOnlineFriends = function (allFriends) {
+//     const onlineFriends = []
+//     for (const friend of allFriends) {
+//         console.log(friend)
+//         if (friend.online) {
+//             console.log("-----------------------------------")
+//             onlineFriends.push(friend)
+//         } else {
+//             console.log("false")
+//         }
+//     }
+
+//     return onlineFriends
+// }
+
+// console.table(getOnlineFriends(friends))
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ]
+
+// const getFriendsByOnlineStatus = function (allFriends) {
+//     const freindsByStatus = {
+//         online: [],
+//         offline: [],
+//     }
+
+//     for (const friend of allFriends) {
+//         if (friend.online) {
+//             freindsByStatus.online.push(friend)
+//             continue
+//         }
+//         freindsByStatus.offline.push(friend)
+//     }
+
+//     return freindsByStatus
+// }
+
+// console.log(getFriendsByOnlineStatus(friends))
+
+// const x = {
+//     a: 1,
+//     b: 2,
+//     c: 50,
+//     d: 100,
+// }
+
+// console.log(Object.keys(x).length)
+// console.log(Object.values(x).length)
+
+////////////////////////////////////////////////////////////////
+
+// Сделать Корзину Товаров
+
+const cart = {
+    items: [],
+    getItems() {},
+    add(product) {},
+    remove(productName) {},
+    clear() {},
+    countTotalPrice() {},
+    increaseQuantity(productName) {},
+    decreaseQuanatity(productName) {},
+}
+console.table(cart)
+

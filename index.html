@@ -4,60 +4,89 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>--JS--</title>
-        <link rel="stylesheet" href="./JavaScriptForKids/style.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
     </head>
-
     <body>
-        <h1>Виселица!</h1>
-        <!-- <script src="/JavaScriptForKids/index.js"></script> -->
-        <script>
-            let name = prompt("Как вас зовут?")
-            console.log("Привет, " + name)
+        <header class="header">
+            <div class="container banner">
+                <img class="header__banner" src="./img/banner.jpeg" alt="" />
+                <h2>Український виробник сувенірної та нагородної продукції</h2>
+                <button>В каталог</button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="side-now">
+                <ul class="side-now-list">
+                    <li class="menu-list__item"><a href="#">Lorem, ipsum.</a></li>
+                    <li class="menu-list__item"><a href="#">Lorem, ipsum.</a></li>
+                    <li class="menu-list__item"><a href="#">Lorem, ipsum.</a></li>
+                    <li class="menu-list__item"><a href="#">Lorem, ipsum.</a></li>
+                    <li class="menu-list__item"><a href="#">Lorem, ipsum.</a></li>
+                </ul>
+            </div>
+            <div class="benefits">
+                <div class="container">
+                    <ul class="benefits-list">
+                        <li class="benefits-list__item">
+                            <h2>Оперативно</h2>
+                            <img src="" alt="icon" />
+                        </li>
+                        <li class="benefits-list__item">
+                            <h2>Професійно</h2>
+                            <img src="" alt="icon" />
+                        </li>
+                        <li class="benefits-list__item">
+                            <h2>Гараннтовано</h2>
+                            <img src="" alt="icon" />
+                        </li>
+                        <li class="benefits-list__item">
+                            <h2>Ексклюзивно</h2>
+                            <img src="" alt="icon" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            confirm(`Не желаете ссыграть ${name} ?`)
-
-            // Создаем массив со словами
-            let words = ["огірок", "помідора", "човен", "тернопіль", "Україна"]
-            // Выбираем случайное слово
-            let word = words[Math.floor(Math.random() * words.length)]
-            // Создаем итоговый массив
-            let answerArray = []
-            for (let i = 0; i < word.length; i++) {
-                answerArray[i] = "_"
-            }
-
-            let remainingLetters = word.length
-
-            // Основной код
-
-            // Игровой цикл
-            while (remainingLetters > 0) {
-                // Показываем состояние игры
-                alert(answerArray.join(" "))
-                // Запрашиваем вариант ответа
-                let guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.")
-
-                if (guess === null) {
-                    // Выходим из игрового цикла
-                    break
-                } else if (guess.length !== 1) {
-                    alert("Пожалуйста, введите только одну букву.")
-                } else {
-                    // Обновляем состояние игры
-                    for (let j = 0; j < word.length; j++) {
-                        if (word[j] === guess) {
-                            // вхождения угаданной буквы
-                            answerArray[j] = guess
-                            // Обновляем answerArray и remainingLetters для каждого
-                            remainingLetters--
-                        }
-                    }
-                }
-            }
-            // Конец игрового цикла
-            alert(answerArray.join(" "))
-            alert(`Отлично! поздровляю ${name} !!! было загадано слово: ${word}`)
-        </script>
+            <div class="our-prodaction">
+                <div class="container">
+                    <ul class="our-prodaction-list">
+                        <li class="prodaction-list-item">
+                            <img src="./img/1.png" alt="" />
+                            <h3>Значки</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/2.png" alt="" />
+                            <h3>Шильди</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/3.png" alt="" />
+                            <h3>Бейджі</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/4.png" alt="" />
+                            <h3>Брелки</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/5.png" alt="" />
+                            <h3>Монети</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/6.png" alt="" />
+                            <h3>Наклдаки</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/7.png" alt="" />
+                            <h3>Таблички</h3>
+                        </li>
+                        <li class="prodaction-list-item">
+                            <img src="./img/8.png" alt="" />
+                            <h3>Медалі</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
     </body>
 </html>
