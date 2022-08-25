@@ -1,6 +1,7 @@
 // Корзина Онлайн Магазина
 
 const cart = {
+    value: 0,
     items: [],
     getItems() {
         return this.items
@@ -52,7 +53,10 @@ const cart = {
             }
         }
     },
-    decreaseQuantity() {},
+    decreaseQuantity() {
+        console.log("decrement -> this", this)
+        this.value -= 1
+    },
 }
 
 cart.add({ name: "🍎", price: 50 })

@@ -1592,3 +1592,127 @@
 // ]
 
 // getSortedFriends(obj)
+
+// const players = [
+//     { id: "player-1", name: "Mango", timePlayed: 310, online: false },
+//     { id: "player-2", name: "Poly", timePlayed: 470, online: false },
+//     { id: "player-3", name: "Kiwi", timePlayed: 210, online: false },
+//     { id: "player-4", name: "Ajax", timePlayed: 150, online: false },
+//     { id: "player-5", name: "Chelsey", timePlayed: 80, online: false },
+// ]
+
+// const sortedByPlayers = [...players].sort((firstPlayer, secondPlayer) => {
+//     return firstPlayer.name.localeCompare(secondPlayer.name)
+// })
+
+// console.table(sortedByPlayers)
+
+// const pizzaPalace = {
+//     pizzas: ["Supercheese", "Smoked", "Four meats"],
+//     checkPizza(pizzaName) {
+//         return this.includes(pizzaName)
+//     },
+//     order(pizzaName) {
+//         const isPizzaAvailable = checkPizza(pizzaName)
+
+//         if (!isPizzaAvailable) {
+//             return `Sorry, there is no pizza named «${this.pizzaName}»`
+//         }
+
+//         return `Order accepted, preparing «${this.pizzaName}» pizza`
+//     },
+// }
+
+// console.log(pizzaPalace)
+
+// const customer = {
+//     username: "Mango",
+//     balance: 24000,
+//     discount: 0.1,
+//     orders: ["Burger", "Pizza", "Salad"],
+//     // Change code below this line
+//     getBalance() {
+//         return this.balance
+//     },
+//     getDiscount() {
+//         return discount
+//     },
+//     setDiscount(value) {
+//         discount = value
+//     },
+//     getOrders() {
+//         return this.orders
+//     },
+//     addOrder(cost, order) {
+//         this.balance -= cost - cost * discount
+//         this.orders.push(order)
+//     },
+//     // Change code above this line
+// }
+
+// customer.setDiscount(0.15)
+// console.log(customer.getDiscount()) // 0.15
+// customer.addOrder(5000, "Steak")
+// console.log(customer.getBalance()) // 19750
+// console.log(customer.getOrders()) // ["Burger", "Pizza", "Salad", "Steak"]
+
+// const historyService = {
+//     orders: [
+//         { email: "jacob@hotmail.com", dish: "Burrito" },
+//         { email: "solomon@topmail.net", dish: "Burger" },
+//         { email: "artemis@coldmail.net", dish: "Pizza" },
+//         { email: "solomon@topmail.net", dish: "Apple pie" },
+//         { email: "jacob@hotmail.com", dish: "Taco" },
+//     ],
+//     getOrdersLog() {
+//         return this.orders.map((order) => `email: ${order.email} dish: ${order.dish}`).join(" - ")
+//     },
+//     getEmails() {
+//         const emails = this.orders.map((order) => order.email)
+//         const uniqueEmails = new Set(emails)
+//         return [...uniqueEmails]
+//     },
+//     getOrdersByEmail(email) {
+//         return this.orders.filter((order) => order.email === email)
+//     },
+// }
+// console.log(historyService.getOrdersByEmail("solomon@topmail.net"))
+
+// const Car = function ({ brand, model, price } = {}) {
+//     this.brand = brand
+//     this.model = model
+//     this.price = price
+
+//     this.changePrice = function (newPrice) {
+//         this.price = newPrice
+//     }
+// }
+
+// const myCar = new Car({
+//     brand: "Audi",
+//     model: "Q3",
+//     price: 3500,
+// })
+// console.log(myCar)
+// const myCar2 = new Car({
+//     brand: "BMW",
+//     model: "X6",
+//     price: 5000,
+// })
+// console.log(myCar2)
+
+// const User = function ({ email, password } = {}) {
+//     this.email = email
+//     this.password = password
+// }
+
+// User.prototype.changeEmail = function (newMail) {
+//     this.email = newMail
+// }
+
+// const mango = new User({ email: "mango@gmail.com", password: 11111 })
+
+// mango.changeEmail('my new mail')
+// console.log(mango)
+
+
