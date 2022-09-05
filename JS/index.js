@@ -1715,4 +1715,389 @@
 // mango.changeEmail('my new mail')
 // console.log(mango)
 
+// class Car1 {
+//     static description = "Класс описывающий автомобиль"
+//     static logInfo(carObj) {
+//         console.log("Car", carObj)
+//     }
+//     // #test = "test" // Закрытое
+//     // mySuperPublicField = 555 // Публичное
+//     constructor({ brand, model, price } = {}) {
+//         console.log("Выполняется конструктор")
 
+//         this.brand = brand
+//         this._model = model
+//         this.price = price
+//     }
+
+//     changePrice(newPrice) {
+//         this.price = newPrice
+//     }
+//     // Геттер
+//     set model(newModel) {
+//         this._model = newModel
+//     }
+//     // Сеттер
+//     get model() {
+//         return this._model
+//     }
+// }
+
+// const carInstance = new Car1({
+//     brand: "Audi",
+//     model: "Q3",
+//     price: 34000,
+// })
+
+// console.log(carInstance._model)
+// carInstance.model = "Q4"
+// console.log(carInstance)
+
+// class Hero {
+//     constructor({ name = "hero", xp = 0 } = {}) {
+//         this.name = name
+//         this.xp = xp
+//     }
+//     gainXp(amount) {
+//         console.log(`${this.name} получает ${amount} опыта`)
+//         this.xp += amount
+//     }
+// }
+
+// class Warrior extends Hero {
+//     constructor({ weapon, ...restProps } = {}) {
+//         super({ restProps })
+
+//         this.weapon = weapon
+//     }
+// }
+
+// class Berserk extends Warrior {
+//     constructor({ warcry, ...restProps }) {
+//         super(restProps)
+
+//         this.warcry = warcry
+//     }
+// }
+
+// const mango = new Warrior({ name: "mango", xp: 1000, weapon: "alebarda" })
+
+// const ajax = new Berserk({
+//     name: "ajax",
+//     xp: 500,
+//     weapon: "axe",
+//     warcry: "aWaaaaaahahahhah",
+// })
+
+// console.log(mango)
+// console.log(ajax)
+
+// mango.gainXp(1000)
+// ajax.gainXp(2000)
+
+// const items = ["Nanitoids", "Prolonger", "Antigravitator"]
+
+// class Storage {
+//     constructor(items) {
+//         this.items = items
+//     }
+//     getItems() {
+//         return this.items
+//     }
+//     addItem(newItem) {
+//         this.items.push(newItem)
+//     }
+//     removeItem(itemToRemove) {
+//         let index = items.indexOf(itemToRemove)
+//         if (index !== -1) {
+//             this.items.splice(index, 1)
+//         }
+//     }
+// }
+
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"])
+// console.log(storage.getItems()) // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid")
+// console.log(storage.getItems()) // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger")
+// console.log(storage.getItems()) // ["Nanitoids", "Antigravitator", "Droid"]
+
+// class StringBuilder {
+//     constructor(initialValue) {
+//         this.value = initialValue
+//     }
+
+//     getValue() {
+//         return this.value
+//     }
+//     padEnd(str) {
+//         this.value + str
+//     }
+//     padStart(str) {
+//         this.value = str
+//     }
+//     padBoth(str) {
+//         return str
+//     }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder(".")
+// console.log(builder.getValue()) // "."
+// builder.padStart("^")
+// console.log(builder.getValue()) // "^."
+// builder.padEnd("^")
+// console.log(builder.getValue()) // "^.^"
+// builder.padBoth("=")
+// console.log(builder.getValue()) // "=^.^="
+
+// class Car {
+//     // Change code below this line
+//     #brand
+//     #model
+//     #price
+
+//     constructor({ brand, model, price }) {
+//         this.#brand = brand
+//         this.#model = model
+//         this.#price = price
+//     }
+
+//     get brand() {
+//         return this.#brand
+//     }
+
+//     set brand(newBrand) {
+//         this.#brand = newBrand
+//     }
+
+//     get model() {
+//         return this.#model
+//     }
+
+//     set model(newModel) {
+//         this.#model = newModel
+//     }
+
+//     get price() {
+//         return this.#price
+//     }
+
+//     set price(newPrice) {
+//         this.#price = newPrice
+//     }
+//     // Change code above this line
+// }
+
+// console.log(Car)
+
+// class Car {
+//     // Change code below this line
+//     #price
+
+//     static MAX_PRICE = 50000
+
+//     constructor({ price }) {
+//         this.#price = price
+//     }
+
+//     get price() {
+//         return this.#price
+//     }
+
+//     set price(newPrice) {
+//         if (this.#price >= MAX_PRICE) {
+//             return (this.#price = this.#price)
+//         } else if (this.#price <= MAX_PRICE) {
+//             this.#price = newPrice
+//         }
+//     }
+//     // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 })
+// console.log(audi.price) // 35000
+
+// audi.price = 49000
+// console.log(audi.price) // 49000
+
+// audi.price = 51000
+// console.log(audi.price) // 49000
+
+// class Car {
+//     static #MAX_PRICE = 50000
+//     // Change code below this line
+//     static checkPrice(price) {
+//         if (price >= Car.#MAX_PRICE) {
+//             return "Error! Price exceeds the maximum"
+//         } else {
+//             return "Success! Price is within acceptable limits"
+//         }
+//     }
+//     // Change code above this line
+//     constructor({ price }) {
+//         this.price = price
+//     }
+// }
+
+// const audi = new Car({ price: 36000 })
+// const bmw = new Car({ price: 64000 })
+
+// console.log(Car.checkPrice(audi.price)) // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)) // "Error! Price exceeds the maximum"
+
+// class User {
+//     constructor(email) {
+//         this.email = email
+//     }
+
+//     get email() {
+//         return this.email
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail
+//     }
+// }
+// // Change code below this line
+
+// class Admin extends User {
+//     static AccessLevel = {
+//         BASIC: "basic",
+//         SUPERUSER: "superuser",
+//     }
+// }
+
+// console.log(Admin.AccessLevel.BASIC)
+
+// const user = [
+//     {
+//         name: "ed",
+//         greeting: "hello",
+//         age: 21,
+//         status: true,
+//     },
+//     {
+//         name: "dima",
+//         greeting: "hello",
+//         age: 21,
+//         status: true,
+//     },
+//     {
+//         name: "kolya",
+//         greeting: "hello",
+//         age: 20,
+//         status: false,
+//     },
+//     {
+//         name: "tolya",
+//         greeting: "hello",
+//         age: 21,
+//         status: true,
+//     },
+//     {
+//         name: "sergey",
+//         greeting: "hello",
+//         age: 20,
+//         status: false,
+//     },
+//     {
+//         name: "rooma",
+//         greeting: "hello",
+//         age: 21,
+//         status: true,
+//     },
+//     {
+//         name: "vasya",
+//         greeting: "hello",
+//         age: 20,
+//         status: false,
+//     },
+// ]
+
+// console.log(user)
+
+// let userRefList = document.querySelector(".user-list")
+
+// const markup = user.map(({ name }) => {
+//     return `<li class="item">${name}</li>`
+// })
+
+// // console.log(markup)
+
+// userRefList.insertAdjacentHTML("afterbegin", markup.join(""))
+
+// userRefList.style.listStyle = "none"
+
+// let btnEl = document.querySelector(".item")
+
+// console.log(btnEl)
+
+// btnEl.addEventListener("click", () => {
+//     btnEl.classList.toggle("item")
+// })
+
+// const btnEl = document.querySelector(".btn")
+
+// btnEl.addEventListener("click", () => {
+//     const imgEl = document.querySelector(".img")
+
+//     console.log(imgEl)
+
+//     imgEl.src = "https://www.whatspaper.com/wp-content/uploads/2021/08/hd-jesus-wallpaper-whatspaper-10.jpg"
+// })
+
+// class User {
+//     email
+
+//     constructor(email) {
+//         this.email = email
+//     }
+
+//     get email() {
+//         return this.email
+//     }
+
+//     set email(newEmail) {
+//         this.email = newEmail
+//     }
+// }
+// class Admin extends User {
+//     // Change code below this line
+//     blacklistedEmails = []
+
+//     static AccessLevel = {
+//         BASIC: "basic",
+//         SUPERUSER: "superuser",
+//     }
+
+//     constructor({ email, accessLevel }) {
+//         super(email)
+//         this.accessLevel = accessLevel
+//     }
+
+//     blacklist(email) {
+//         this.blacklistedEmails.push(email)
+//     }
+
+//     isBlacklisted(email) {
+//         if (this.blacklistedEmails.includes(email)) {
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
+// }
+
+// const mango = new Admin({
+//     email: "mango@mail.com",
+//     accessLevel: Admin.AccessLevel.SUPERUSER,
+// })
+
+// console.log(mango.email) // "mango@mail.com"
+// console.log(mango.accessLevel) // "superuser"
+
+// mango.blacklist("poly@mail.com")
+// console.log(mango.blacklistedEmails) // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")) // false
+// console.log(mango.isBlacklisted("poly@mail.com")) // true
