@@ -1,0 +1,18 @@
+// РАБОТА ИЗ СЕРВЕРОВ - Сбор данных форм
+
+const form = document.querySelector(".js-register-form")
+console.log(form)
+
+form.addEventListener("submit", onFormSubmit)
+
+function onFormSubmit(event) {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    console.log(formData)
+
+    formData.forEach((value, name) => {
+        console.log(value)
+        console.log(name)
+    })
+}
