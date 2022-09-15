@@ -1,4 +1,4 @@
-// import { galleryItems } from "./gallery-items.js"
+import { galleryItems } from "./gallery-items.js"
 // Change code below this line
 
 // Сделай такую же галерею как в первом задании, но используя библиотеку SimpleLightbox, которая возьмет на себя обработку кликов по изображениям, открытие и закрытие модального окна, а также пролистывание изображений при помощи клавиатуры. Посмотри демо видео работы галереи с подключенной библиотекой.
@@ -11,33 +11,17 @@
 
 // Посмотри в документации секцию «Options» и добавь отображение подписей к изображениям из атрибута alt. Пусть подпись будет снизу и появляется через 250 миллисекунд после открытия изображения.
 
-// const galleryRef = document.querySelector(".gallery")
+const galleryRef = document.querySelector(".gallery")
 
-// const listItem = galleryItems.map((item) => {
-//     return `<a class="gallery__item" href="${item.original}">
-//     <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
-//   </a>`
-// })
+const listItem = galleryItems.map((item) => {
+    return `<a class="gallery__item" href="${item.original}">
+    <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
+  </a>`
+})
 
-// galleryRef.insertAdjacentHTML("afterbegin", listItem.join(" "))
+galleryRef.insertAdjacentHTML("afterbegin", listItem.join(" "))
 
-// new SimpleLightbox(".gallery a", {
-//     captionDelay: 250,
-//     captionsData: "alt",
-// })
-
-
-import { galleryItems } from "./gallery-items.js";
-// Change code below this line
-const galleryRef = document.querySelector(".gallery");
-const listImg = galleryItems.map((item) => {
-  return `<a class="gallery__item" href="${item.original}">
-  <img class="gallery__image"  src="${item.preview}"    alt="${item.description}" />
-</a>`;
-});
-galleryRef.insertAdjacentHTML("afterbegin", listImg.join(" "));
 new SimpleLightbox(".gallery a", {
-  captionDelay: 250,
-  captionsData: "alt",
-});
-console.log(galleryItems);
+    captionDelay: 250,
+    captionsData: "alt",
+})
