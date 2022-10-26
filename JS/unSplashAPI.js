@@ -1,7 +1,8 @@
 window.onload = function () {
-    let preloader = document.querySelector(".loader")
+    let preloader = document.querySelector(".overlay")
     preloader.style.display = "none"
 }
+
 const API_KEY = "49f74095e8597e05653b643436e3bfba"
 const BASE_URL = `http://api.openweathermap.org/`
 
@@ -10,8 +11,9 @@ const inputEl = document.querySelector(".search-weather")
 
 inputEl.addEventListener("input", onSearch)
 
-function onSearch(e) {
+function onSearch() {
     let inputValue = inputEl.value.trim()
+
     fetchAPI(inputValue)
 }
 
@@ -25,7 +27,7 @@ async function fetchAPI(country) {
     if (response.ok) {
         getWeather(responseResult)
     } else {
-        // weatherBlock.innerHTML = responseResult.message
+        weatherBlock.innerHTML = "Error"
     }
 }
 
