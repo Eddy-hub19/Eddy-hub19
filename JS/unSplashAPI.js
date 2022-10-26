@@ -4,7 +4,7 @@ window.onload = function () {
 }
 
 const API_KEY = "40a6345d9f7dd35bb1a40de36996f5f5"
-const BASE_URL = `http://api.openweathermap.org/`
+const BASE_URL = `https://api.openweathermap.org/`
 
 const weatherBlock = document.querySelector("#weather")
 const inputEl = document.querySelector(".search-weather")
