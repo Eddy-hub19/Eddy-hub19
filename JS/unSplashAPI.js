@@ -3,7 +3,7 @@ window.onload = function () {
     preloader.style.display = "none"
 }
 
-const API_KEY = "49f74095e8597e05653b643436e3bfba"
+const API_KEY = "40a6345d9f7dd35bb1a40de36996f5f5"
 const BASE_URL = `http://api.openweathermap.org/`
 
 const weatherBlock = document.querySelector("#weather")
