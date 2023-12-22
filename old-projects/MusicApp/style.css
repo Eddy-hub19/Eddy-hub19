@@ -50,8 +50,9 @@ div.white-player-top div.center {
 div.white-player-top span.now-playing {
   color: #414344;
   font-family: "Lato", sans-serif;
-  line-height: 64px;
+  /* line-height: 64px; */
   font-weight: 600;
+  font-size: 23px;
 }
 div.white-player-top img.show-playlist {
   float: right;
@@ -413,6 +414,7 @@ div#white-player-playlist-container {
   top: 0px;
   left: 376px;
   background-color: white;
+  background-color: black;
   z-index: 9999;
   display: none;
   border-radius: 8px;
@@ -444,6 +446,7 @@ div.white-player-up-next {
   padding-left: 20px;
   font-size: 24px;
   color: #414344;
+  color: white;
 }
 
 div.white-player-playlist {
@@ -478,6 +481,7 @@ div.white-player-playlist-song div.playlist-song-meta {
 }
 div.white-player-playlist-song div.playlist-song-meta span.playlist-song-name {
   color: #414344;
+  color: white;
   font-size: 14px;
   display: block;
   width: 100%;

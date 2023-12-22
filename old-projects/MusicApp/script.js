@@ -10,31 +10,39 @@ const songsToAdd = [{
         artist: "Mkt.san",
         album: "Monori",
         url: "./music/Жизнь комедия - Mkt.san.mp3",
-        cover_art_url: "#",
+        cover_art_url: "./music/Комедия.jpg",
     },
     {
         name: "Моя сонная мелодия",
         artist: "Mkt.san",
         album: "Monori",
-        url: "./music/Моя сонная мелодия.mp3",
-        cover_art_url: "#",
+        url: "./music/Моя-сонная-мелодия.mp3",
+        cover_art_url: "./music/my-sleepy-melody.jpg",
     },
     {
         name: "Arigato",
         artist: "Mkt.san & Mr.Benjiro",
         album: "Monori",
         url: "./music/Arigato.mp3",
-        cover_art_url: "http://surl.li/xwou",
+        cover_art_url: "./music/arigato.jpeg",
     },
 ];
 
 Amplitude.init({
-    songs: [{
+    songs: [
+        {
+            name: "Я тобі Бажаю",
+            artist: "Mkt.san",
+            album: "З Днюхою вітаю",
+            url: "./music/Бажаю.mp3",
+            cover_art_url: "./music/бажаю.gif",
+        },
+        {
             name: "Arigato",
             artist: "Mkt.san & Mr.Benjiro",
             album: "Monori",
             url: "./music/Arigato.mp3",
-            cover_art_url: "https://media.istockphoto.com/vectors/arigato-ink-brush-vector-lettering-thank-you-in-japanese-modern-vector-id1270607235",
+            cover_art_url: "./music/arigato.jpeg",
         },
         {
             name: "Муза",
@@ -54,8 +62,8 @@ Amplitude.init({
             name: "Моя сонная мелодия",
             artist: "Mkt.san",
             album: "Monori",
-            url: "./music/Моя сонная мелодия.mp3",
-            cover_art_url: "./music/my sleepy melody.jpg",
+            url: "./music/Моя-сонная-мелодия.mp3",
+            cover_art_url: "./music/my-sleepy-melody.jpg",
         },
         {
             name: "Жизнь Комедия",
