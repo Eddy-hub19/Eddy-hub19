@@ -414,7 +414,7 @@ div#white-player-playlist-container {
   top: 0px;
   left: 376px;
   background-color: white;
-  background-color: black;
+  /* background-color: black; */
   z-index: 9999;
   display: none;
   border-radius: 8px;
