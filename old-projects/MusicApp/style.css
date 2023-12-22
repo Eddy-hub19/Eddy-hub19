@@ -40,6 +40,7 @@ div.white-player-top {
   display: flex;
   width: 100%;
   align-items: center;
+  text-wrap: nowrap;
 }
 div.white-player-top div {
   flex: 1;
@@ -50,7 +51,8 @@ div.white-player-top div.center {
 div.white-player-top span.now-playing {
   color: #414344;
   font-family: "Lato", sans-serif;
-  /* line-height: 64px; */
+  font-family: monospace;
+  line-height: 34px;
   font-weight: 600;
   font-size: 23px;
 }

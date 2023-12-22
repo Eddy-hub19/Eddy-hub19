@@ -38,6 +38,27 @@ Amplitude.init({
             cover_art_url: "./music/baghayu.png",
         },
         {
+            name: "Обрывки в моей памяти",
+            artist: "Mkt.san",
+            album: "",
+            url: "./music/Обрывки-в-моей-памяти.mp3",
+            cover_art_url: "./music/Обрывки.jpg",
+        },
+        {
+            name: "Бестия",
+            artist: "Mkt.san",
+            album: "",
+            url: "./music/Бестия.mp3",
+            cover_art_url: "./music/Комедия.jpg",
+        },
+        {
+            name: "Танцуй",
+            artist: "Mkt.san",
+            album: "",
+            url: "./music/Танцуй-беба.mp3",
+            cover_art_url: "./music/Танцуй.png",
+        },
+        {
             name: "Arigato",
             artist: "Mkt.san & Mr.Benjiro",
             album: "Monori",
