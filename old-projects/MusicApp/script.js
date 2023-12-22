@@ -35,7 +35,7 @@ Amplitude.init({
             artist: "Mkt.san",
             album: "З Днюхою вітаю",
             url: "./music/Бажаю.mp3",
-            cover_art_url: "./music/бажаю.gif",
+            cover_art_url: "./music/baghayu.png",
         },
         {
             name: "Arigato",
